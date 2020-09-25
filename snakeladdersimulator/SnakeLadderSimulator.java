@@ -3,7 +3,7 @@ package com.snakeladdersimulator;
 public class SnakeLadderSimulator {
 	public static void main(String[] args) {
 	int position = 0;
-	while (position<=100) 
+	while(position<100) 
 	{
 	int roll = (int)(Math.random()*(6-1))+1;
 	System.out.println("Number after rolling die: " + roll);
@@ -11,7 +11,10 @@ public class SnakeLadderSimulator {
 	switch (turn) {
 	case 1:
 		System.out.println("Ladder!!");
-		position +=roll;
+		if(!((position+roll)>100))
+			position +=roll;
+		else
+			System.out.println("No turn");
 		break;
 	case 2:
 		System.out.println("Snake!!");
@@ -22,7 +25,7 @@ public class SnakeLadderSimulator {
 	default:
 		System.out.println("No Play!!");
 			}
-		}
+	}
 	System.out.println("Position of the Single player: " + position);
 	}
 }
