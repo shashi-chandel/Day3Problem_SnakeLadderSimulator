@@ -2,11 +2,11 @@ package com.snakeladdersimulator;
 
 public class SnakeLadderSimulator {
 	public static void main(String[] args) {
-	int position = 0;
+	int position = 0, role=0;
 	while(position<100) 
 	{
 	int roll = (int)(Math.random()*(6-1))+1;
-	System.out.println("Number after rolling die: " + roll);
+	System.out.println("\nNumber after rolling die: " + roll);
 	int turn = (int)(Math.random() * 10 ) % 3;
 	switch (turn) {
 	case 1:
@@ -25,7 +25,10 @@ public class SnakeLadderSimulator {
 	default:
 		System.out.println("No Play!!");
 			}
+	role++;
+	System.out.println("Position of the player: " + position);
 	}
-	System.out.println("Position of the Single player: " + position);
+	System.out.println("\n        Player wins the game!!!");
+	System.out.println(" \n Number of roles to win: " + role);
 	}
 }
