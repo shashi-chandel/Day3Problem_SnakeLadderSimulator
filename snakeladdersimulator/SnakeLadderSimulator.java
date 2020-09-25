@@ -2,6 +2,7 @@ package com.snakeladdersimulator;
 
 public class SnakeLadderSimulator {
 	public static void main(String[] args) {
-	System.out.println("Welcome to Snake & Ladder Game!!");
+	int position = 0;
+	System.out.println("Position of the Single player: " + position);
 }
 }
